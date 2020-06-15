@@ -16,4 +16,4 @@ let
 
       stackYaml = "stack-${version}.yaml";
     };
-in hsPkgs
+in hsPkgs.haskell-language-server.component
