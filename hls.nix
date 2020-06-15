@@ -8,7 +8,7 @@ let
   hsPkgs = with pkgs.haskell-nix;
     stackProject {
       src = cleanSourceHaskell {
-        src = source.hls-master;
+        src = source."hls-${tag}";
         name = "hls-source";
       };
       cache = l (./cache + "-${tag}/${version}.json");
@@ -16,4 +16,4 @@ let
 
       stackYaml = "stack-${version}.yaml";
     };
-in hsPkgs
+in hsPkgs.haskell-language-server.component
