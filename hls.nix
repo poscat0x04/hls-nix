@@ -1,31 +1,19 @@
-{ source ? import ./source }:
+{ source ? import ./source, tag ? "master", version ? "8.8.3" }:
 let
-  haskellNix = import source.haskell-nix {};
+  haskellNix = import source.haskell-nix { };
+  l = file: builtins.fromJSON (builtins.readFile file);
 
-  pkgs =
-    import haskellNix.sources.nixpkgs-2003 haskellNix.nixpkgsArgs;
+  pkgs = import haskellNix.sources.nixpkgs-2003 haskellNix.nixpkgsArgs;
 
-  hsPkgs = with pkgs.haskell-nix; stackProject {
-    src = cleanSourceHaskell {
-      src = source.hls-master;
-      name = "hls-source";
+  hsPkgs = with pkgs.haskell-nix;
+    stackProject {
+      src = cleanSourceHaskell {
+        src = source.hls-master;
+        name = "hls-source";
+      };
+      cache = l (./cache + "-${tag}/${version}.json");
+      modules = [{ packages.haskell-language-server.doCheck = false; }];
+
+      stackYaml = "stack-${version}.yaml";
     };
-    cache = [
-      {
-        name = "shake";
-        url = "https://github.com/wz1000/shake.git";
-        rev = "fb3859dca2e54d1bbb2c873e68ed225fa179fbef";
-        sha256 = "0sa0jiwgyvjsmjwpfcpvzg2p7277aa0dgra1mm6afh2rfnjphz8z";
-      }
-    ];
-
-    modules = [
-      {
-        packages.haskell-language-server.doCheck = false;
-      }
-    ];
-
-    stackYaml = "stack-8.8.3.yaml";
-  };
-in
-  hsPkgs
+in hsPkgs
