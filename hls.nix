@@ -13,9 +13,15 @@ let
     cache = [
       {
         name = "shake";
-        url = "https://github.com/wz1000/shake";
+        url = "https://github.com/wz1000/shake.git";
         rev = "fb3859dca2e54d1bbb2c873e68ed225fa179fbef";
         sha256 = "0sa0jiwgyvjsmjwpfcpvzg2p7277aa0dgra1mm6afh2rfnjphz8z";
+      }
+    ];
+
+    modules = [
+      {
+        packages.haskell-language-server.doCheck = false;
       }
     ];
 
