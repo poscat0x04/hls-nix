@@ -1,0 +1,20 @@
+[
+    {
+        "name": "cabal-helper",
+        "rev": "a18bbb2af92e9b4337e7f930cb80754f2408bcfd",
+        "sha256": "1zn0j1niqqrjfz4x0zbncgmdzdnyxfkziqrkk8zf8845x0ixyw3x",
+        "url": "https://github.com/DanielG/cabal-helper.git"
+    },
+    {
+        "name": "hie-bios",
+        "rev": "89d28817716a1c8df7e191f3a43c4504bc6379eb",
+        "sha256": "1hq5avgjbyx955qzgap3p1h3hb54jmxaii46gmgkv20ky7ycwkq6",
+        "url": "https://github.com/fendor/hie-bios.git"
+    },
+    {
+        "name": "shake",
+        "rev": "4d56fe9f09bd3bd63ead541c571c756995da490a",
+        "sha256": "04jpgndny3h5cpm5hnk90h8wj3m1ap7d554cy0w42c2k2z0r2cvq",
+        "url": "https://github.com/mpickering/shake.git"
+    }
+]
