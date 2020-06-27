@@ -2,6 +2,6 @@
     "fetchSubmodules": true,
     "owner": "haskell",
     "repo": "haskell-language-server",
-    "rev": "d2654185eef1b0d703cebc694e85438e20600e37",
-    "sha256": "0s0k2i0imkcn9zykhrlqq0r4ssv25mwbpdyc675xkzgl1vj1l8kd"
+    "rev": "a9f96277a37624072d60bdc7f9e5c2241c9ae785",
+    "sha256": "0yzdwmbm4k03gxp41ivsq0qh9w21h5l3ihdsr48h1da57ml2zsy0"
 }

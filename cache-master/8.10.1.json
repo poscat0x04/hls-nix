@@ -1,14 +1,8 @@
 [
     {
-        "name": "cabal-plan",
-        "rev": "894b76c0b6bf8f7d2f881431df1f13959a8fce87",
-        "sha256": "06iklj51d9kh9bhc42lrayypcpgkjrjvna59w920ln41rskhjr4y",
-        "url": "https://github.com/peti/cabal-plan.git"
-    },
-    {
-        "name": "shake",
-        "rev": "fb3859dca2e54d1bbb2c873e68ed225fa179fbef",
-        "sha256": "0sa0jiwgyvjsmjwpfcpvzg2p7277aa0dgra1mm6afh2rfnjphz8z",
-        "url": "https://github.com/wz1000/shake.git"
+        "name": "cabal-helper",
+        "rev": "79a5608778493bf32e74b54bbf1ea2729941e50f",
+        "sha256": "1jsiwg94yy8pwhzi3z6ayja9qdgf7fl6xn1h9z681j6lhbx225f8",
+        "url": "https://github.com/DanielG/cabal-helper.git"
     }
 ]
