@@ -8,7 +8,7 @@ let
   hsPkgs = with pkgs.haskell-nix;
     stackProject {
       src = cleanSourceHaskell {
-        src = source."hls-${tag}";
+        src = source.lookup tag;
         name = "hls-source";
       };
       cache = l (./cache + "-${tag}/${version}.json");
