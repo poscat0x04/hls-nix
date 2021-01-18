@@ -14,4 +14,4 @@ The whole nix expression is stored in one single file `hls.nix`, it is a paramet
 
 the expression then returns a [haskell.nix component](https://input-output-hk.github.io/haskell.nix/reference/library/#component).
 
-To build the actual executable, run `nix build exes.haskell-language-server`.
+To build the actual executable, run `nix-build -A exes.haskell-language-server`.
