@@ -1,6 +1,6 @@
 # hls-nix
 
-Nix derivations for hasekll-language-server
+Nix derivations for [haskell-language-server](https://github.com/haskell/haskell-language-server)
 
 ## Introduction
 
